@@ -25,7 +25,9 @@ class View(ft.UserControl):
 
 
         self._ddGenre = ft.Dropdown(label="Genere")
+
         self._controller.fillDDGenre()
+
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
 
         row1 = ft.Row([self._ddGenre, self._btnCreaGrafo],
@@ -33,6 +35,7 @@ class View(ft.UserControl):
         self._page.controls.append(row1)
 
         self._ddArtist = ft.Dropdown(label="Artist")
+        self._controller.fillDDArtisti()
         self._btnCreaGrafo = ft.ElevatedButton(text="Trova Cammino", on_click=self._controller.handleCammino)
 
         row2 = ft.Row([self._ddArtist, self._btnCreaGrafo],
